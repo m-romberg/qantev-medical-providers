@@ -14,7 +14,8 @@ import { Icon } from "leaflet";
  * - none
  *
  * props:
- * - providers
+ * - providers: array of providers [{address, name, id,...},...]
+ * - coordinates: center of map [1.98, 48.654]
  *
  * {App, ProviderDetails} => ProviderMap
  */
