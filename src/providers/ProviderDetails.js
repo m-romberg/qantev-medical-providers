@@ -1,8 +1,8 @@
 import './ProviderDetails.css';
 
 import { useParams } from "react-router-dom";
-import formatNumber from './helpers/formatNumber';
-import ProviderMap from './map/ProviderMap';
+import formatNumber from '../helpers/formatNumber';
+import ProviderMap from '../map/ProviderMap';
 import { Container, Row, Col } from 'react-bootstrap';
 
 /**

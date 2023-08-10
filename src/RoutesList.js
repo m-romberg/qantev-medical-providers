@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, Routes, Navigate } from "react-router-dom";
 
-import ProviderDetails from "./ProviderDetails";
+import ProviderDetails from "./providers/ProviderDetails";
 import Homepage from "./Homepage";
 
 /**

@@ -1,6 +1,6 @@
 import { Col, Container, Row } from 'react-bootstrap';
 import './Homepage.css';
-import ProviderTable from './ProviderTable';
+import ProviderTable from './providers/ProviderTable';
 import ProviderMap from './map/ProviderMap';
 
 /**
