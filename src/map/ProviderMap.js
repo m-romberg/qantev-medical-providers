@@ -1,9 +1,9 @@
 import "leaflet/dist/leaflet.css";
+import { Icon } from "leaflet";
 import { MapContainer, Marker, TileLayer, Popup } from "react-leaflet";
+import { Col, Container, Row } from "react-bootstrap";
 
 import './ProviderMap.css';
-import { Icon } from "leaflet";
-import { Col, Container, Row } from "react-bootstrap";
 
 /**
  *
