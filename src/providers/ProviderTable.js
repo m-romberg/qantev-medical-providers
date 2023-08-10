@@ -28,7 +28,7 @@ function ProviderTable({ providers }) {
     <Container className="ProviderTable">
       <Row>
         <Col>
-          <Table className="ProviderTable-table">
+          <Table size={"sm"} className="ProviderTable-table">
             <thead>
               <tr>
                 <th>Medical Providers</th>
