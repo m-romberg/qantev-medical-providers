@@ -12,7 +12,7 @@ import formatNumber from './helpers/formatNumber';
  * - none
  *
  * props:
- * - XXX
+ * - providers: array of providers [{address, name, id,...},...]
  *
  * RoutesList --> ProviderDetails
  */

@@ -12,7 +12,7 @@ import ProviderTable from './ProviderTable';
  * - none
  *
  * props:
- * - none
+ * - providers: array of providers [{address, name, id,...},...]
  *
  * RoutesList --> Homepage --> ProviderTable
  *

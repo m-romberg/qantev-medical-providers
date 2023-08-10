@@ -13,7 +13,7 @@ import Homepage from "./Homepage";
  * - none
  *
  * props:
- * - providers
+ * - providers: array of providers [{address, name, id,...},...]
  *
  *
  * App --> RoutesList --> { Homepage, ProviderDetails }
