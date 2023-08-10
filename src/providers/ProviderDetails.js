@@ -42,8 +42,6 @@ function ProviderDetails({ providers }) {
     details.total_cost)
   );
 
-
-
   return (
     <Container className="ProviderDetails">
       <Row>
