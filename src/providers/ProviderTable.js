@@ -6,7 +6,8 @@ import './ProviderTable.css';
 /**
  * ProviderTable
  *
- * Visual component to display medical providers in a table
+ * Visual component to display medical providers in a table with
+ * links to providers page
  *
  * state:
  * - none
