@@ -1,3 +1,4 @@
-.ProviderTable {
-    justify-content: center;
+.ProviderTable table {
+    margin: 0 auto;
+    min-width: 100%;
 }

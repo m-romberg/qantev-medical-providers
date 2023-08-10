@@ -1,4 +1,4 @@
-import { Container } from 'react-bootstrap';
+import { Col, Container, Row, Table } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './ProviderTable.css';
 
@@ -26,22 +26,27 @@ function ProviderTable({ providers }) {
 
   return (
     <Container className="ProviderTable">
-      <table>
-        <thead>
-          <tr>
-            <th>Medical Providers</th>
-          </tr>
-        </thead>
-        <tbody>
-          {sortedProviders.map((p) =>
-            <tr key={p.id}>
-              <td>
-                <Link to={`/providers/${p.id}`}>{p.name}</Link>
-              </td>
-            </tr>
-          )}
-        </tbody>
-      </table>
+      <Row>
+        <Col>
+          <Table className="ProviderTable-table">
+            <thead>
+              <tr>
+                <th>Medical Providers</th>
+              </tr>
+            </thead>
+            <tbody>
+              {sortedProviders.map((p) =>
+                <tr key={p.id}>
+                  <td>
+                    <Link to={`/providers/${p.id}`}>{p.name}</Link>
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </Table>
+        </Col>
+      </Row>
+
     </Container>
   );
 }
