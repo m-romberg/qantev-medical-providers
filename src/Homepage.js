@@ -1,3 +1,4 @@
+import { Col, Container, Row } from 'react-bootstrap';
 import './Homepage.css';
 import ProviderTable from './ProviderTable';
 import ProviderMap from './map/ProviderMap';
@@ -20,10 +21,18 @@ import ProviderMap from './map/ProviderMap';
  */
 function Homepage({ providers }) {
   return (
-    <div className="Homepage">
-      <ProviderTable providers={providers} />
-      <ProviderMap providers={providers} />
-    </div>
+    <Container className="Homepage">
+      <Row className="Homepage-providers-table">
+        <Col>
+          <ProviderTable providers={providers} />
+        </Col>
+      </Row>
+      <Row className="Homepage-providers-map">
+        <Col>
+          <ProviderMap providers={providers} />
+        </Col>
+      </Row>
+    </Container>
   );
 }
 
