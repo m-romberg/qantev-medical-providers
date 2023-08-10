@@ -28,7 +28,7 @@ function ProviderDetails({ providers }) {
   const currency = "$";
   const details = providers.find((p) => p.id === +providerId);
   const details_keys = Object.keys(details);
-  const details_keys_of_interest = details_keys.filter(k => (k !== "name" && k !== "id" && k !== "coordinates" ))
+  const details_keys_of_interest = details_keys.filter(k => (k !== "name" && k !== "id" && k !== "coordinates"));
 
   //formats numbers for display 19900 => $19,900
   details.average_inpatient_claim_cost = currency.concat(formatNumber(
@@ -60,16 +60,15 @@ function ProviderDetails({ providers }) {
             </thead>
             <tbody>
               {details_keys.map((k) => {
-                if (k !== "id" && k !== "coordinates"){
+                if (k !== "id" && k !== "coordinates") {
                   return (
                     <tr key={k}>
-                  <td>{snakeCaseToCapitalText(k)}</td>
-                  <td>{details[k]}</td>
-                </tr>
-                  )
-                }}
-
-                )}
+                      <td>{snakeCaseToCapitalText(k)}</td>
+                      <td>{details[k]}</td>
+                    </tr>
+                  );
+                }
+              })}
             </tbody>
           </Table>
         </Col>
