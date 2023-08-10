@@ -13,7 +13,7 @@ import "./Navigation.css";
 */
 function Navigation() {
   return (
-    <nav className="Navigation Navigation-loggedIn">
+    <nav className="Navigation">
       <NavLink to="/home" className="Navigation" end>
         View all providers
       </NavLink>

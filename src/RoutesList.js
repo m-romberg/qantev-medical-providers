@@ -7,7 +7,7 @@ import Homepage from "./Homepage";
 /**
  * RoutesList
  *
- * Holds routes for app
+ * Holds routes for app. Unmatched path sent to /home
  *
  * state:
  * - none

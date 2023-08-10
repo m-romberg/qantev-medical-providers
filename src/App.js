@@ -1,10 +1,10 @@
 import { BrowserRouter } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
 import './App.css';
 import RoutesList from './RoutesList';
-import providers from './assets/data_sample.json';
-import { Container } from "react-bootstrap";
 import Navigation from "./Navigation";
+import providers from './assets/data_sample.json';
 
 
 /**
