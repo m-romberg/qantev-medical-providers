@@ -2,8 +2,9 @@ import './ProviderDetails.css';
 
 import { useParams } from "react-router-dom";
 import formatNumber from '../helpers/formatNumber';
+import snakeCaseToCapitalText from '../helpers/snakeCaseToCapitalText';
 import ProviderMap from '../map/ProviderMap';
-import { Container, Row, Col } from 'react-bootstrap';
+import { Container, Row, Col, Table } from 'react-bootstrap';
 
 /**
  * ProviderDetails
@@ -24,17 +25,22 @@ function ProviderDetails({ providers }) {
 
   if (!providers) return <div> No providers.</div>;
 
+  const currency = "$";
   const details = providers.find((p) => p.id === +providerId);
+  const details_keys = Object.keys(details);
+  const details_keys_of_interest = details_keys.filter(k => (k !== "name" && k !== "id" && k !== "coordinates" ))
 
-  details.average_inpatient_claim_cost = formatNumber(
+  //formats numbers for display 19900 => $19,900
+  details.average_inpatient_claim_cost = currency.concat(formatNumber(
     details.average_inpatient_claim_cost
+  ));
+  details.average_outpatient_claim_cost = currency.concat(formatNumber(
+    details.average_outpatient_claim_cost)
   );
-  details.average_outpatient_claim_cost = formatNumber(
-    details.average_outpatient_claim_cost
+  details.total_cost = currency.concat(formatNumber(
+    details.total_cost)
   );
-  details.total_cost = formatNumber(
-    details.total_cost
-  );
+
 
 
   return (
@@ -46,17 +52,30 @@ function ProviderDetails({ providers }) {
       </Row>
       <Row>
         <Col>
-          <p>Address: {details.address}</p>
-          <p>Coordinates : {details.coordinates[0]} {details.coordinates[1]}</p>
-          <p>Phone number: {details.phone_number}</p>
-          <p>Average patient age: {details.average_patient_age} years old</p>
-          <p>
-            Average inpatient claim cost: ${details.average_inpatient_claim_cost}
-          </p>
-          <p>
-            Average outpatient claim cost: ${details.average_outpatient_claim_cost}
-          </p>
-          <p>Total cost: ${details.total_cost}</p>
+          <Table size={"sm"} className="ProviderDetails-table">
+            <thead>
+              <tr>
+                <th colSpan={2}>Information</th>
+              </tr>
+            </thead>
+            <tbody>
+              {details_keys.map((k) => {
+                if (k !== "id" && k !== "coordinates"){
+                  return (
+                    <tr key={k}>
+                  <td>{snakeCaseToCapitalText(k)}</td>
+                  <td>{details[k]}</td>
+                </tr>
+                  )
+                }}
+
+                )}
+            </tbody>
+          </Table>
+        </Col>
+      </Row>
+      <Row>
+        <Col>
           <ProviderMap providers={[details]} coordinates={details.coordinates} />
         </Col>
       </Row>
