@@ -31,7 +31,7 @@ function ProviderTable({ providers }) {
           <Table size={"sm"} className="ProviderTable-table">
             <thead>
               <tr>
-                <th>Medical Providers</th>
+                <th> Click to view provider</th>
               </tr>
             </thead>
             <tbody>

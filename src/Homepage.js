@@ -22,6 +22,11 @@ import ProviderMap from './map/ProviderMap';
 function Homepage({ providers }) {
   return (
     <Container className="Homepage">
+      <Row>
+        <Col>
+          <h1>Medical Providers</h1>
+        </Col>
+      </Row>
       <Row className="Homepage-providers-table">
         <Col>
           <ProviderTable providers={providers} />
