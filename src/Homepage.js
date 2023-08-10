@@ -1,4 +1,5 @@
 import './Homepage.css';
+import ProviderTable from './ProviderTable';
 
 /**
  * Homepage
@@ -19,7 +20,7 @@ import './Homepage.css';
 function Homepage() {
   return (
     <div className="Homepage">
-
+      <ProviderTable />
     </div>
   );
 }
