@@ -3,8 +3,21 @@ import { MapContainer, Marker, TileLayer, Popup } from "react-leaflet";
 
 import './ProviderMap.css'
 import { Icon } from "leaflet";
-import { Link } from "react-router-dom";
 
+/**
+ *
+ * ProviderMap
+ *
+ * Map to Display the location of provider(s) with popups
+ *
+ * state:
+ * - none
+ *
+ * props:
+ * - providers
+ *
+ * {App, ProviderDetails} => ProviderMap
+ */
 function ProviderMap ({providers}) {
 
   const customIcon = new Icon({
