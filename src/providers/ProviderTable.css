@@ -2,3 +2,13 @@
     margin: 0 auto;
     min-width: 100%;
 }
+
+.ProviderTable a {
+    text-decoration:none;
+    color: darkgrey;
+    font-size: 15px;
+}
+
+.ProviderTable a:hover {
+    color: blue;
+}
