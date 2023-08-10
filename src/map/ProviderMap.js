@@ -34,7 +34,7 @@ function ProviderMap({ providers, coordinates }) {
       <Row>
         <Col>
 
-          <MapContainer center={center} zoom={12}>
+          <MapContainer center={center} zoom={11.5}>
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
