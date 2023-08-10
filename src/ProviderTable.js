@@ -22,6 +22,8 @@ function ProviderTable({ providers }) {
     return <div className="ProviderTable"> Sorry no providers.</div>;
   };
 
+  const sortedProviders = providers.sort((a, b) => a.name.localeCompare(b.name));
+
   return (
     <Container className="ProviderTable">
       <table>
@@ -31,7 +33,7 @@ function ProviderTable({ providers }) {
           </tr>
         </thead>
         <tbody>
-          {providers.map((p) =>
+          {sortedProviders.map((p) =>
             <tr key={p.id}>
               <td>
                 <Link to={`/providers/${p.id}`}>{p.name}</Link>
