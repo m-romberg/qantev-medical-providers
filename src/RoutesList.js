@@ -10,20 +10,25 @@ import Homepage from "./Homepage";
  * Holds routes for app
  *
  * state:
- *     none
+ *
+ * props:
+ * - providers
  *
  *
  * App --> RoutesList --> { Homepage, ProviderDetails }
  */
 
-function RoutesList() {
+function RoutesList({ providers }) {
 
 
   return (
   <div className="RoutesList">
     <Routes>
-      <Route path="/" element={<Homepage />} />
-      <Route path="/providers/:provider" element={<ProviderDetails />} />
+      <Route path="/" element={<Homepage providers={providers} />} />
+      <Route
+        path="/providers/:providerId"
+        element={<ProviderDetails providers={providers} />}
+      />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   </div>);

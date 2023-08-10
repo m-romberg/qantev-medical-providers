@@ -17,10 +17,10 @@ import ProviderTable from './ProviderTable';
  * RoutesList --> Homepage --> ProviderTable
  *
  */
-function Homepage() {
+function Homepage({ providers }) {
   return (
     <div className="Homepage">
-      <ProviderTable />
+      <ProviderTable providers={providers} />
     </div>
   );
 }
