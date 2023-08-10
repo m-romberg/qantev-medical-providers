@@ -2,6 +2,7 @@ import './ProviderDetails.css';
 
 import { useParams } from "react-router-dom";
 import formatNumber from './helpers/formatNumber';
+import ProviderMap from './map/ProviderMap';
 
 /**
  * ProviderDetails
@@ -14,7 +15,7 @@ import formatNumber from './helpers/formatNumber';
  * props:
  * - providers: array of providers [{address, name, id,...},...]
  *
- * RoutesList --> ProviderDetails
+ * RoutesList --> ProviderDetails -> ProviderMap
  */
 function ProviderDetails({ providers}) {
 
@@ -48,6 +49,7 @@ function ProviderDetails({ providers}) {
         Average outpatient claim cost: ${details.average_outpatient_claim_cost}
         </p>
         <p>Total cost: ${details.total_cost}</p>
+      <ProviderMap providers={[details]} />
     </div>
   );
 }
