@@ -9,7 +9,7 @@ import { Col, Container, Row } from "react-bootstrap";
  *
  * ProviderMap
  *
- * Map to Display the location of provider(s) with popups
+ * Map to display the location of provider(s) with popups
  *
  * state:
  * - none
