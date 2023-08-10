@@ -32,8 +32,6 @@ function Homepage({ providers }) {
         <Col>
           <ProviderTable providers={providers} />
         </Col>
-      </Row>
-      <Row className="Homepage-providers-map">
         <Col>
           <ProviderMap providers={providers} />
         </Col>

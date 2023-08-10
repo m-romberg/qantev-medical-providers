@@ -68,8 +68,6 @@ function ProviderDetails({ providers }) {
             </tbody>
           </Table>
         </Col>
-      </Row>
-      <Row>
         <Col>
           <ProviderMap providers={[details]} coordinates={details.coordinates} />
         </Col>
