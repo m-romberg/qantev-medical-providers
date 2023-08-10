@@ -16,7 +16,7 @@ import './ProviderMap.css';
  *
  * props:
  * - providers: array of providers [{address, name, id,...},...]
- * - coordinates: center of map [1.98, 48.654]
+ * - coordinates: center of map [1.3521, 103.8198] (default)
  *
  * {App, ProviderDetails} => ProviderMap
  */
