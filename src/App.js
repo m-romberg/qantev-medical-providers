@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import RoutesList from './RoutesList';
 
 import providers from './assets/data_sample.json';
+import ProviderMap from './map/ProviderMap';
 
 /**
  *
