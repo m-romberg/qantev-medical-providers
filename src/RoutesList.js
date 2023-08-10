@@ -10,6 +10,7 @@ import Homepage from "./Homepage";
  * Holds routes for app
  *
  * state:
+ * - none
  *
  * props:
  * - providers
@@ -24,12 +25,12 @@ function RoutesList({ providers }) {
   return (
   <div className="RoutesList">
     <Routes>
-      <Route path="/" element={<Homepage providers={providers} />} />
+      <Route path="/home" element={<Homepage providers={providers} />} />
       <Route
         path="/providers/:providerId"
         element={<ProviderDetails providers={providers} />}
       />
-      <Route path="*" element={<Navigate to="/" />} />
+      <Route path="*" element={<Navigate to="/home" />} />
     </Routes>
   </div>);
 }
