@@ -12,6 +12,7 @@ import "./Navigation.css";
 *       to: Home
 */
 function Navigation() {
+
   return (
     <nav className="Navigation">
       <NavLink to="/home" className="Navigation" end>

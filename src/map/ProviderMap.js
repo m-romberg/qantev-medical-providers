@@ -33,13 +33,11 @@ function ProviderMap({ providers, coordinates }) {
     <Container>
       <Row>
         <Col>
-
           <MapContainer center={center} zoom={11.5}>
             <TileLayer
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-
             {providers.map(p => (
               <Marker key={p.id} position={p.coordinates} icon={mapIcon}>
                 <Popup>{p.name}</Popup>

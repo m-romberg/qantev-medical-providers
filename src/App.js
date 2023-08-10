@@ -16,6 +16,7 @@ import providers from './assets/data_sample.json';
  * App -> {RoutesList, Navigation}
  */
 function App() {
+
   return (
     <Container className="App">
       <BrowserRouter>
