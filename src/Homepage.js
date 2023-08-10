@@ -8,7 +8,7 @@ import ProviderMap from './map/ProviderMap';
  *
  * Homepage for app.
  *
- * Displays table for medical providers.
+ * Displays table and map for medical providers.
  *
  * state:
  * - none
