@@ -49,7 +49,7 @@ function ProviderDetails({ providers}) {
         Average outpatient claim cost: ${details.average_outpatient_claim_cost}
         </p>
         <p>Total cost: ${details.total_cost}</p>
-      <ProviderMap providers={[details]} />
+      <ProviderMap providers={[details]} coordinates={details.coordinates} />
     </div>
   );
 }

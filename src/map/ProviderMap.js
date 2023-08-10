@@ -18,7 +18,9 @@ import { Icon } from "leaflet";
  *
  * {App, ProviderDetails} => ProviderMap
  */
-function ProviderMap ({providers}) {
+function ProviderMap ({providers, coordinates}) {
+  const center = coordinates ? [+coordinates[0],+coordinates[1]] : [1.3521, 103.8198 ]
+
 
   const customIcon = new Icon({
     iconUrl:"https://cdn-icons-png.flaticon.com/512/6731/6731177.png",
@@ -26,7 +28,7 @@ function ProviderMap ({providers}) {
   });
 
   return (
-    <MapContainer center={[1.3521, 103.8198 ]} zoom={13}>
+    <MapContainer center={center} zoom={13}>
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
