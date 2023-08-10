@@ -4,6 +4,7 @@ import './App.css';
 import RoutesList from './RoutesList';
 import providers from './assets/data_sample.json';
 import { Container } from "react-bootstrap";
+import Navigation from "./Navigation";
 
 
 /**
@@ -12,12 +13,13 @@ import { Container } from "react-bootstrap";
  *
  * Controls app. Passes down providers
  *
- * App -> RoutesList
+ * App -> {RoutesList, Navigation}
  */
 function App() {
   return (
     <Container className="App">
       <BrowserRouter>
+        <Navigation />
         <RoutesList providers={providers} />
       </BrowserRouter>
     </Container>
